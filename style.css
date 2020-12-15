@@ -1,0 +1,36 @@
+body{
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-auto-rows: auto;
+  column-gap: 16px
+}
+
+nav {
+  grid-area: auto/1/auto/13;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: right;
+    margin: 4rem auto 0 auto;
+  display: table;
+}
+
+
+nav li {
+  margin-top: 5px;
+  list-style-type: none;
+  border-bottom: 1px solid #000;
+  width: 300px;
+  padding-bottom: 5px
+}
+
+nav li a {
+  font-weight: 500;
+  padding-right: 5px;
+  color: #181818;
+  font-size: 1.2rem;
+  text-decoration: none
+}
+
+nav li a:hover {
+  text-decoration: underline
+}

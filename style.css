@@ -1,7 +1,10 @@
+
+
 body{
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-auto-rows: auto;
   column-gap: 16px
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -33,4 +36,68 @@ nav li a {
 
 nav li a:hover {
   text-decoration: underline
+}
+
+a.site-title {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  color: #181818;
+  font-weight: 500;
+  letter-spacing: -.1rem;
+  font-size: 4rem;
+  text-decoration: none;
+  line-height: 1
+}
+
+.highlighter {
+  background: linear-gradient(to left, transparent 50%, #ffff7f 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out
+}
+
+.highlighter:hover {
+  color: #181818;
+  background-position: left bottom
+}
+
+a.project-link {
+  background: 0 0;
+  cursor: default
+}
+
+a.project-link:hover {
+  text-decoration: none
+}
+
+.project-block {
+  margin-top: .5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: .5rem;
+  line-height: 1.3333333
+}
+
+.project-block div.project-image {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer
+}
+
+.project-block div.project-image img.project-image {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+  height: 500px;
+}
+
+.project-block h2 {
+  cursor: pointer;
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  border-top: 0 solid transparent;
+  margin: 0;
+  width: 100%;
+}
+
+.project-block h2 a:hover {
+  text-decoration: none
 }

@@ -1,10 +1,282 @@
+* {
+  box-sizing: border-box !important;
+  margin: 0
+}
 
+input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit
+}
 
-body{
+blockquote, body, h1, h2, h3, hr, ol, p, pre, ul {
+  margin: 0;
+  padding: 0
+}
+
+blockquote {
+  padding: 1.3rem;
+  background: 0 0;
+  color: #181818;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: -apple-system, "Helvetica Neue", sans-serif
+}
+
+blockquote strong {
+  font-weight: 700
+}
+
+blockquote p {
+  margin-bottom: 0
+}
+
+blockquote cite {
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  display: block;
+  font-size: .8rem;
+  margin-top: 10px;
+  text-align: right;
+  font-style: normal
+}
+
+blockquote cite a {
+  background-color: transparent;
+  color: #181818;
+  text-decoration: underline
+}
+
+blockquote a.footnote {
+  color: #181818
+}
+
+code {
+  font-family: Monaco, monospace;
+  letter-spacing: 0;
+  display: block;
+  padding: 1rem;
+  font-size: 12px;
+  border-top: 7px double #fff;
+  border-bottom: 7px double #fff;
+  overflow-x: scroll
+}
+
+code>a:last-of-type::after,
+code>span:last-of-type::after {
+  content: "_";
+  animation: blinker 1.1s cubic-bezier(1, 0, 0, 1) infinite
+}
+
+.mono {
+  font-family: Monaco, monospace !important;
+  font-weight: 400 !important
+}
+
+p {
+  margin-bottom: 1em
+}
+
+main h1.h1-title {
+  letter-spacing: -.03rem;
+  font-weight: 600;
+  border-top: 3px solid #000;
+  font-family: -apple-system, "Helvetica Neue", sans-serif
+}
+
+main h1:not(.h1-title), main h2, main h3 {
+  font-weight: 600;
+  letter-spacing: -.03rem;
+  border-top: 1px solid #000;
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  margin-top: 4rem;
+  margin-bottom: 2rem
+}
+
+main h1:not(.h1-title) {
+  font-size: 2rem
+}
+
+main h2 {
+  font-size: 1.9rem
+}
+
+main h3 {
+  font-size: 1.8rem
+}
+
+main ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem
+}
+
+main ul {
+  margin-left: 2rem
+}
+
+main ul li {
+  margin-top: .2rem;
+  margin-bottom: .2rem
+}
+
+h1 {
+  font-size: 2rem
+}
+
+img {
+  max-width: 100%
+}
+
+hr {
+  border-top: 1px solid #000;
+  margin-bottom: 1rem
+}
+
+.footnotes {
+  font-size: .9rem;
+  padding-top: 1rem
+}
+
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  display: table
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.border-top {
+  border-top: 1px solid #000
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+.highlighter {
+  background: linear-gradient(to left, transparent 50%, #ffff7f 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out
+}
+
+.highlighter:hover {
+  color: #181818;
+  background-position: left bottom
+}
+
+ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem
+}
+
+ul li a {
+  background: 0 0 !important;
+}
+
+main h1,
+main h2,
+main h3 {
+  position: relative
+}
+
+main h1 a,
+main h2 a,
+main h3 a {
+  background: 0 0
+}
+
+main h1.h1-title:after {
+  content: "→";
+  text-rendering: optimizeLegibility;
+  font-family: Monaco, monospace;
+  position: absolute;
+  font-weight: 300;
+  right: 0;
+  transform: rotate(90deg)
+}
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -.4rem
+}
+
+.sourceCode {
+  background: rgba(0, 0, 0, .89);
+  color: #f8f8f2
+}
+
+.sourceCode a {
+  background-color: transparent
+}
+
+a.sourceLine,
+a.sourceLine:hover {
+  color: #f8f8f2;
+  text-decoration: none
+}
+
+.sourceCode .s,
+.sourceCode .s1,
+.sourceCode .s2,
+.sourceCode .st {
+  color: RGBA(113, 119, 238, 1)
+}
+
+.sourceCode .l,
+.sourceCode .n,
+.sourceCode .no,
+.sourceCode .op,
+.sourceCode .p,
+.sourceCode .x {
+  color: #f8f8f2
+}
+
+.sourceCode .c,
+.sourceCode .c1 {
+  color: #6272a4
+}
+
+.sourceCode .cf,
+.sourceCode .k {
+  color: #ff0
+}
+
+.sourceCode .m {
+  color: #bd93f9
+}
+
+body {
+  display: grid;
+  background-color: #fff;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  color: #181818;
+  cursor: default;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-auto-rows: auto;
   column-gap: 16px
-  font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+a.site-title {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  color: #181818;
+  font-weight: 500;
+  letter-spacing: -.1rem;
+  font-size: 4rem;
+  text-decoration: none;
+  line-height: 1
 }
 
 nav {
@@ -12,11 +284,8 @@ nav {
   position: relative;
   margin-top: 0;
   margin-bottom: 1rem;
-  text-align: right;
-    margin: 4rem auto 0 auto;
-  display: table;
+  text-align: right
 }
-
 
 nav li {
   margin-top: 5px;
@@ -24,6 +293,11 @@ nav li {
   border-bottom: 1px solid #000;
   width: 300px;
   padding-bottom: 5px
+}
+
+nav li:nth-child(2):not(main nav li) {
+  border-top: 1px solid #000;
+  padding-top: .2rem
 }
 
 nav li a {
@@ -38,26 +312,104 @@ nav li a:hover {
   text-decoration: underline
 }
 
-a.site-title {
-  font-family: -apple-system, "Helvetica Neue", sans-serif;
-  color: #181818;
-  font-weight: 500;
-  letter-spacing: -.1rem;
-  font-size: 4rem;
+main nav {
+  margin: 4rem auto 0 auto;
+  display: table;
+}
+
+a {
+  color: inherit;
   text-decoration: none;
-  line-height: 1
+  cursor: pointer
 }
 
-.highlighter {
-  background: linear-gradient(to left, transparent 50%, #ffff7f 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out
+main {
+  min-height: calc(100vh - 8.75rem);
+  clear: both;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  grid-area: auto/4/auto/10;
+  font-size: 18px
 }
 
-.highlighter:hover {
-  color: #181818;
-  background-position: left bottom
+main p {
+  text-align: justify
+}
+
+main a:not(main nav a) {
+  background: rgba(255, 255, 0, .5);
+  color: #111;
+  padding: 2px;
+  padding-right: 2px
+}
+
+main a:hover {
+  text-decoration: underline
+}
+
+main a.footnote {
+  background: 0 0
+}
+
+footer {
+  max-height: 100px;
+  grid-area: auto/1/auto/13;
+  display: flex;
+  background: #000;
+  color: #fff
+}
+
+footer>p:not(.mono) {
+  margin-top: 9px;
+  margin-left: 8px;
+  margin-bottom: 0;
+  flex-shrink: 0
+}
+
+footer>p.mono {
+  margin-top: 9px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  text-align: right;
+  width: 100%;
+  font-size: .9rem
+}
+
+footer>p>a>img {
+  height: 1.5rem;
+  display: inline-block;
+  vertical-align: top;
+  filter: invert(1)
+}
+
+.post-block {
+  margin-top: .5rem;
+  margin-bottom: 2rem
+}
+
+.post-block a {
+  padding: 0;
+  background: 0 0
+}
+
+.post-block h2 {
+  border-top: 0 solid transparent;
+  margin: -5px 0 0 -2px;
+  width: 100%
+}
+
+.post-block h2 a:hover {
+  text-decoration: none
+}
+
+.post-block p {
+  font-size: .9rem
+}
+
+time {
+  font-size: .7rem;
+  color: #666
 }
 
 a.project-link {
@@ -76,18 +428,18 @@ a.project-link:hover {
   line-height: 1.3333333
 }
 
-.project-block div.project-image {
-  height: 500px;
+.project-block div.post-image {
+  height: 300px;
   width: 100%;
   overflow: hidden;
   cursor: pointer
 }
 
-.project-block div.project-image img.project-image {
+.project-block div.post-image img.post-image {
   width: 100%;
   object-position: center;
   object-fit: cover;
-  height: 500px;
+  height: 300px;
 }
 
 .project-block h2 {
@@ -100,4 +452,134 @@ a.project-link:hover {
 
 .project-block h2 a:hover {
   text-decoration: none
+}
+
+@media print {
+  main,
+  nav,
+  nav li {
+    animation: none !important;
+    opacity: 1 !important
+  }
+
+  nav {
+    margin-top: 0 !important
+  }
+
+  nav a.site-title {
+    font-size: 3rem
+  }
+}
+
+@media screen and (min-width:34.375rem) {
+  body {
+    column-gap: 32px
+  }
+}
+
+@media screen and (min-width:60rem) {
+  body {
+    column-gap: 64px
+  }
+}
+
+@media all and (min-width:481px) and (max-width:1024px) {
+  .project-block div.post-image {
+    height: 200px
+  }
+
+  blockquote {
+    font-size: 1.2rem
+  }
+
+  body {
+    font-size: 14px
+  }
+
+  nav li a {
+    font-size: 14px
+  }
+
+  a.site-title {
+    font-size: 3rem
+  }
+
+  main {
+    font-size: 16px;
+    grid-area: auto/1/auto/13;
+    padding-left: 1rem;
+    padding-right: 1rem
+  }
+}
+
+@media all and (max-width:480px) {
+
+  blockquote{
+    font-size: 1.2rem
+  }
+
+  body {
+    font-size: 12px
+  }
+
+  nav {
+    margin-top: 0
+  }
+
+  nav li a {
+    font-size: 12px
+  }
+
+  a.site-title {
+    font-size: 2.5rem;
+    padding-right: 5px
+  }
+
+  main {
+    font-size: 12px;
+    grid-area: auto/1/auto/13;
+    padding-left: 1rem;
+    padding-right: 1rem
+  }
+
+  .project-block div.post-image {
+    height: 150px
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer>p.mono {
+    text-align: left;
+    margin-left: 8px
+  }
+}
+
+@media all and (min-width:1025px) {
+
+  main h1,
+  main h1.h1-title {
+    width: calc(100% + 10vw);
+    margin-left: -5vw
+  }
+
+  main p time {
+    margin-left: -5vw
+  }
+
+  main h2 {
+    width: calc(100% + 10vw);
+    margin-left: -5vw
+  }
+
+  main h3 {
+    width: calc(100% + 9vw);
+    margin-left: -4.5vw
+  }
+
+  blockquote{
+    width: calc(100% + 10vw);
+    margin-left: -5vw
+  }
 }

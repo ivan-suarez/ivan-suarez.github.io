@@ -111,7 +111,7 @@ h3 {font-size: var(--fs-h3)}
 }
 
 .section__subtitle--intro,
-.section--subtitle--about {
+.section__subtitle--about {
     background: var(--clr-accent);
     padding: .25em;
     font-family: var(--ff-secondary);
@@ -198,5 +198,50 @@ nav {display: none;}
 
     .service + .service {
         margin-left: 2em;
+    }
+}
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px){
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 2em;
+        
+    }
+
+
+    .section__title--about{
+        grid-column: 1;
+    }
+
+    .section--subtitle--about{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100%+2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4 em);
+    }
+
+
+
+    .about-me__img {
+       grid-area: img;
+       position: relative;
+       z-index: 2;
     }
 }

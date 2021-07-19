@@ -397,3 +397,9 @@ header {
     transform: scale(1.2);
     opacity: .5;
 }
+
+.portfolio__item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}

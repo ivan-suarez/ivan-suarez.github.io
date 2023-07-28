@@ -1,52 +1,67 @@
 <html>
-  
-  <body>
-    <header>
-      <h1>Iván Suárez Castiñeiras</h1>
+
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <header class="flex justify-between">
+    <h1 class="text-5xl font-bold">Iván Suárez Castiñeiras</h1>
+    <div class="">
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
-    </header>
-    
-    <div id="projects">
-      <div>
-        <a href="projects/twitterclone.html">Twitter frontend clone</a>
-      </div>
-      <div>
-        <a href="projects/spotifyexporter.html">Spotify playlist exporter</a>
-      </div>
     </div>
-    <div id="about">
-      Hi, I'm Ivan. I'm a fullstack web developer residing in Oviedo, Spain.
-    </div>
-    <div id="curriculum">
-      <div>
-        Experience
-        <ul>
-          <li>February 2023 - Present - Business Insights</li>
-          <li>October 2021 - February 2023 - Capgemini</li>
-        </ul>
+
+  </header>
+  <div id="holy-grail-body" class="flex flex-1">
+    <nav style="flex: 0 0 12em"></nav>
+    <main>
+      <div id="projects">
+        <div>
+          <a href="projects/twitterclone.html">Twitter frontend clone</a>
+        </div>
+        <div>
+          <a href="projects/spotifyexporter.html">Spotify playlist exporter</a>
+        </div>
       </div>
-      <div>
-        Education
-        <ul>
-          <li>2023 - Google Cloud Certified Professional Cloud Architect</li>
-          <li>2014-2020 - Bachelor Degree in Software Engineering (not finished)</li>
-          <li>2012-2014 - Advanced Technician in Multi-platform Application Development</li>
-        </ul>
+      <div id="about">
+        Hi, I'm Ivan. I'm a fullstack web developer residing in Oviedo, Spain.
       </div>
-      <div>
-        Skills
-        <ul>
-          <li>Backend: Java, Springboot, JPA, Node.js, SQL, JUnit</li>
-          <li>Frontend: HTML, CSS, Javascript, Vue.js, React, TailwindCSS, Cypress.io</li>
-          <li>Devops: Linux, Google Cloud, Docker, Kubernetes, Github Actions</li>
-          <li>Other: Figma</li>
-        </ul>
+      <div id="curriculum">
+        <div>
+          Experience
+          <ul>
+            <li>February 2023 - Present - Business Insights</li>
+            <li>October 2021 - February 2023 - Capgemini</li>
+          </ul>
+        </div>
+        <div>
+          Education
+          <ul>
+            <li>2023 - Google Cloud Certified Professional Cloud Architect</li>
+            <li>2014-2020 - Bachelor Degree in Software Engineering (not finished)</li>
+            <li>2012-2014 - Advanced Technician in Multi-platform Application Development</li>
+          </ul>
+        </div>
+        <div>
+          Skills
+          <ul>
+            <li>Backend: Java, Springboot, JPA, Node.js, SQL, JUnit</li>
+            <li>Frontend: HTML, CSS, Javascript, Vue.js, React, TailwindCSS, Cypress.io</li>
+            <li>Devops: Linux, Google Cloud, Docker, Kubernetes, Github Actions</li>
+            <li>Other: Figma</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <footer>
-      <a>Linkedin</a>
-    </footer>
-  </body>
-  
+    </main>
+
+    <aside style="flex: 0 0 12em"></aside>
+
+  </div>
+
+  <footer>
+    <a>Linkedin</a>
+  </footer>
+</body>
+
 </html>

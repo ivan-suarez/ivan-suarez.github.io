@@ -18,7 +18,7 @@
 <body class="flex flex-col min-h-screen">
   <header class="flex justify-between fixed top-0 w-full z-10">
     <h1 class="text-5xl font-bold p-4">Iván Suárez</h1>
-    <div class="py-2">
+    <div class="py-2 px-4">
       <a href="#home" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Home</a>
       <a href="#work" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Work</a>
       <a href="#projects" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Projects</a>
@@ -32,12 +32,12 @@
       <div id="home" class="min-h-screen flex flex-col justify-center">
         
         <div class="text-9xl py-2">Iván Suárez Castiñeiras</div>
-        <div class="text-5xl py-2">Hey there! I’m full stack web developer based in rainy Asturias, Spain. </div>
-        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-4 border border-blue-500 hover:border-transparent rounded">See my work</button>
+        <div class="text-5xl py-2">Hey there! I’m a full stack web developer based in rainy Asturias, Spain. </div>
+        <a href="#work" class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-4 border border-blue-500 hover:border-transparent rounded">See my work</a>
       </div>
       <div id="work" class="py-10 min-h-screen">
         <h2 class="text-3xl font-bold py-10">Work</h2>
-        <div class="flex justify-evenly">
+        <div class="flex justify-evenly py-10">
           <div>
             <a href="projects/axa.html">
               <img src="axa-logo.png" class="h-64 w-64"></a>
@@ -51,7 +51,7 @@
 
       <div id="projects" class="py-10 min-h-screen">
         <h2 class="text-3xl font-bold py-10">Personal projects</h2>
-        <div class="flex justify-evenly">
+        <div class="flex justify-evenly py-10">
           <div>
             <a href="projects/spotifyexporter.html">
               <img src="spotify-logo.png" class="h-64 w-64"></a>
@@ -61,20 +61,23 @@
 
       <div id="about" class="py-10 min-h-screen">
         <h2 class="text-3xl font-bold">About me</h2>
-        <p>
-          Hi, I'm Ivan. I'm a fullstack web developer residing in Oviedo, Spain.
-        </p>
+        <div class="py-10">
+          <p>
+            Hi, I'm Ivan. I'm a fullstack web developer residing in Oviedo, Spain.
+          </p>
+        </div>
+        
         <div id="curriculum" class="py-10">
           <h2 class="text-3xl font-bold py-6">CV</h2>
           <div class="flex">
-            <div>
+            <div class="px-2">
               <div class="font-bold">Experience</div>
               <ul>
                 <li>February 2023 - Present - Business Insights</li>
                 <li>October 2021 - February 2023 - Capgemini</li>
               </ul>
             </div>
-            <div>
+            <div class="px-2">
               <div class="font-bold">Education</div>
               <ul>
                 <li>2023 - Google Cloud Certified Professional Cloud Architect</li>
@@ -82,7 +85,7 @@
                 <li>2012-2014 - Advanced Technician in Multi-platform Application Development</li>
               </ul>
             </div>
-            <div>
+            <div class="px-2">
               <div class="font-bold">Skills</div>
               <ul>
                 <li>Backend: Java, Springboot, JPA, Node.js, SQL, JUnit</li>

@@ -22,6 +22,16 @@
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
+
+        /* CSS for scaling effect on hover */
+    .hover-grow {
+      transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+    }
+
+    a:hover .hover-grow {
+      transform: scale(1.2); /* Adjust scale value as needed */
+    }
+
   </style>
 </head>
 
@@ -50,11 +60,11 @@
         <div class="flex justify-evenly py-10 flex-col md:flex-row">
           <div>
             <a href="projects/axa.html">
-              <img src="axa-logo.png" class="h-64 w-64"></a>
+              <img src="axa-logo.png" class="h-64 w-64 hover-grow"></a>
           </div>
           <div>
             <a href="projects/carrefour.html">
-              <img src="carrefour-logo.png" class="h-64 w-64"></a>
+              <img src="carrefour-logo.png" class="h-64 w-64 hover-grow"></a>
           </div>
         </div>
       </div>
@@ -64,7 +74,7 @@
         <div class="flex justify-evenly py-10">
           <div>
             <a href="projects/spotifyexporter.html">
-              <img src="spotify-logo.png" class="h-64 w-64"></a>
+              <img src="spotify-logo.png" class="h-64 w-64 hover-grow"></a>
           </div>
         </div>
       </div>
@@ -75,7 +85,7 @@
           <img src="portrait.jpg" class="w-64"></a>
           <p>
             Hi, I'm Ivan. I'm a fullstack web developer residing in Oviedo, Spain. While I started as a backend engineer, I wanted to learn know more about the whole product development process, 
-            that's why I've been getting into different fields over the years: devops, cloud, frontend, UX design... While it's impossible to be proficient in everything, knowing the basics has given me a more holistic view in my job, and make able 
+            that's why I've been getting into different fields over the years: devops, cloud, frontend, UX design... While it's impossible to be proficient in everything, knowing the basics has given me a more holistic view in my job, and making me able 
             to emphatize better with the rest of the team.
           </p>
           

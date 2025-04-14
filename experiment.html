@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Virtual Showroom</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+        #porsche-container {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #porsche-container canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="porsche-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script>
+        // Scene setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, 400 / 300, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(400, 300);
+        renderer.setClearColor(0x000000);
+        document.getElementById('porsche-container').appendChild(renderer.domElement);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+
+        // Camera position
+        camera.position.set(3, 2, 5);
+        camera.lookAt(0, 0, 0);
+
+        // Load Porsche model
+        const loader = new THREE.GLTFLoader();
+        let car;
+
+        loader.load(
+            'porsche.glb',
+            function (gltf) {
+                car = gltf.scene;
+                car.scale.set(0.5, 0.5, 0.5);
+                scene.add(car);
+            },
+            undefined,
+            function (error) {
+                console.error('An error occurred while loading the model:', error);
+            }
+        );
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (car) {
+                car.rotation.y += 0.005; // Slow rotation
+            }
+            
+            renderer.render(scene, camera);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const container = document.getElementById('porsche-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+        });
+
+        animate();
+    </script>
+</body>
+</html>

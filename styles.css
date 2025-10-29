@@ -15,7 +15,23 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fafafa;
+    background: linear-gradient(-45deg, #ffb3a1, #ffa8d1, #87ceeb, #98f5e1, #fff2a1, #ffb3b3);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Typography */
@@ -23,6 +39,7 @@ h1, h2, h3 {
     margin-bottom: 20px;
     font-weight: 500;
     color: #222;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -43,6 +60,8 @@ h3 {
 
 p {
     margin-bottom: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.7;
 }
 
 /* Navigation */
@@ -58,22 +77,40 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #555;
+    color: #333;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 nav a:hover {
     color: #000;
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Layout Components */
 header {
     margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 main {
     margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 section, article {
@@ -83,9 +120,12 @@ section, article {
 footer {
     text-align: center;
     font-size: 0.9rem;
-    color: #777;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    color: #333;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Lists */

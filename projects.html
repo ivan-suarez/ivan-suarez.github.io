@@ -7,50 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>My Projects</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Project Portfolio</h2>
-            <p>Here are some of the projects I've worked on:</p>
-        </section>
+    <div class="site-container">
+        <header>
+            <h1>My Projects</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
         
-        <section>
-            <h3>Midigen</h3>
-            <p>Midigen is a Machine Learning model to generate MIDI music, using the LSTM architecture. It's still under development.
-            </p>
-            <p>Midigen started as a dream to generate cozy JRPG style music like that in Pokemon and old Final Fantasy games. It is way far from that and I don't think that will get to that point,
-                but it has been a fun experiment to learn more about Machine Learning development. I've come soon to realize that the hard part is not the code but the data processing.
-            </p>
-            <p>I started the project with some classical music MIDI files that I downloaded from Kaggle, since there were simpler than the JRPG music. I manually edited the files so that only one instrument is used, so I could
-                focus on creating a melody. My initial struggle was thinking how should I approach the duration of the notes, whether it should be absolute or relative to the previous note. I ended up using the latter, since it
-                assured my that the notes would be in the correct order. I also switched latter to duration categories instead of using floating numbers, which gave me more robustness. 
-            </p>
-            <p>But now I had a different problem, the notes were converging to the same pitch. I switched to one-hot encoding features, but the problem persisted. This brought me a lot of frustration, until I eventually abandoned
-                the project. After AI-assisted coding tools became better, I decided to give it another try. I switched to a multiple-head attention model, which gave me better results, but not much.
-            </p>
-            <p>Here's a sample of the generated music:</p>
-            <audio controls>
-                <source src="https://github.com/ivan-suarez/midigen/raw/refs/heads/master/generated_sequence.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <p><strong>Technologies:</strong> Python, Tensorflow, Keras</p>
-            <p><a href="#">View Project</a> | <a href="#">GitHub Repository</a></p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 My Personal Website. All rights reserved.</p>
-    </footer>
+        <main>
+            <section>
+                <h2>Project Portfolio</h2>
+                <p>Here are some of the projects I've worked on:</p>
+            </section>
+            
+            <section>
+                <h3>Midigen</h3>
+                <p>Midigen is a Machine Learning model to generate MIDI music, using the LSTM architecture. It's still under development.
+                </p>
+                <p>Midigen started as a dream to generate cozy JRPG style music like that in Pokemon and old Final Fantasy games. It is way far from that and I don't think that will get to that point,
+                    but it has been a fun experiment to learn more about Machine Learning development. I've come soon to realize that the hard part is not the code but the data processing.
+                </p>
+                <p>I started the project with some classical music MIDI files that I downloaded from Kaggle, since there were simpler than the JRPG music. I manually edited the files so that only one instrument is used, so I could
+                    focus on creating a melody. My initial struggle was thinking how should I approach the duration of the notes, whether it should be absolute or relative to the previous note. I ended up using the latter, since it
+                    assured my that the notes would be in the correct order. I also switched latter to duration categories instead of using floating numbers, which gave me more robustness. 
+                </p>
+                <p>But now I had a different problem, the notes were converging to the same pitch. I switched to one-hot encoding features, but the problem persisted. This brought me a lot of frustration, until I eventually abandoned
+                    the project. After AI-assisted coding tools became better, I decided to give it another try. I switched to a multiple-head attention model, which gave me better results, but not much.
+                </p>
+                <p>Here's a sample of the generated music:</p>
+                <audio controls>
+                    <source src="https://github.com/ivan-suarez/midigen/raw/refs/heads/master/generated_sequence.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p><strong>Technologies:</strong> Python, Tensorflow, Keras</p>
+                <p><a href="#">View Project</a> | <a href="#">GitHub Repository</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 My Personal Website. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html> 

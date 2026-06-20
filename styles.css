@@ -160,4 +160,109 @@ article h3 {
 article em {
     color: #666;
     font-size: 0.9rem;
-} 
+}
+
+/* Card-style content tabs */
+.content-tabs {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 105px;
+    gap: 24px;
+    align-items: start;
+}
+
+.tab-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.tab-panels {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.tab-card {
+    display: block;
+    padding: 8px 10px;
+    color: #333;
+    text-align: left;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tab-card:hover,
+.tab-card:focus-visible {
+    color: #000;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.tab-card[aria-selected="true"] {
+    color: #000;
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-card strong {
+    font-weight: 500;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+.tab-panel {
+    animation: tabPanelIn 0.3s ease;
+}
+
+.tab-panel[hidden] {
+    display: none;
+}
+
+.tab-panel h3 {
+    margin-top: 0;
+}
+
+@keyframes tabPanelIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 520px) {
+    .content-tabs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tab-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .tab-panels {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tab-panel {
+        animation: none;
+    }
+}

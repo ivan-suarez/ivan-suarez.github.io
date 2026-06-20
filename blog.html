@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | My Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="tabs.js" defer></script>
 </head>
 
 <body>
@@ -28,8 +29,27 @@
                 <p>Welcome to my blog! Here I share my thoughts and experiences about web development, technology, and more.
                 </p>
             </section>
-            <article>
-                <p>
+            <div class="content-tabs" data-tabs>
+                <div class="tab-list" role="tablist" aria-label="Blog posts">
+                    <a class="tab-card" id="tab-capitalism" href="#capitalism" role="tab"
+                        aria-controls="capitalism" aria-selected="true">
+                        <strong>Capitalism</strong>
+                    </a>
+                    <a class="tab-card" id="tab-post-scarcity" href="#post-scarcity" role="tab"
+                        aria-controls="post-scarcity" aria-selected="false">
+                        <strong>Scarcity</strong>
+                    </a>
+                    <a class="tab-card" id="tab-science-fiction" href="#science-fiction" role="tab"
+                        aria-controls="science-fiction" aria-selected="false">
+                        <strong>Sci-Fi</strong>
+                    </a>
+                </div>
+
+                <div class="tab-panels">
+                    <article class="tab-panel" id="capitalism" role="tabpanel" aria-labelledby="tab-capitalism">
+                        <h3>Thoughts on capitalism</h3>
+                        <p><em>Posted on December 31, 2025</em></p>
+                        <p>
                     Many in the tech sphere self-identify as libertarians, or pro-capitalism. I want to make an argument on why capitalism is not the optime system 
                     to benefit us as a species, without falling into the typical socialists points. First off, the only motive, or "loss-function" of capitalism is pure
                     profit. I don't think many of us have meditate long enough on this point. The problem with profit is that is something that benefits from mass utility,
@@ -39,12 +59,13 @@
                     So what's the alternative? We can see the roots of it are beginning to sprout. Status is starting to be no longer about who has the new shiny and expensive thing but
                     about exclusivity and originality. People are gatekeeping niche brands, modding old iPods and posting your political opinions gets more engagement than your vacations 
                     in Bali. Companies that sacrifice cold profit in exchange of making something product of love and passion will be more longeve. 
-                </p>
-            </article>
-            <article>
-                <h3>Thoughts on post-scarcity</h3>
-                <p><em>Posted on January 15, 2023</em></p>
-                <p>
+                        </p>
+                    </article>
+
+                    <article class="tab-panel" id="post-scarcity" role="tabpanel" aria-labelledby="tab-post-scarcity">
+                        <h3>Thoughts on post-scarcity</h3>
+                        <p><em>Posted on January 15, 2023</em></p>
+                        <p>
                     Mercancy is produced through work leveraged by capital and resources. As automatization increases, work
                     gets cheapers. It will get to a point where there are no operational costs and only capital. This can go
                     different ways. One, the only way to get money is through having capital, be it land or automated
@@ -52,14 +73,13 @@
                     capital to a bigger one, if you have access to resources you can extract. Resources on Earth are finite,
                     but the Universe should be big enough. So sovereign humans would colonize other planets and form
                     societies through pure will.
-                </p>
-                <p><a href="#">Read more...</a></p>
-            </article>
+                        </p>
+                    </article>
 
-            <article>
-                <h3>Thoughts on science fiction</h3>
-                <p><em>Posted on February 20, 2023</em></p>
-                <p>
+                    <article class="tab-panel" id="science-fiction" role="tabpanel" aria-labelledby="tab-science-fiction">
+                        <h3>Thoughts on science fiction</h3>
+                        <p><em>Posted on February 20, 2023</em></p>
+                        <p>
                     I'm dissapointed by how stagnated is the scifi-genre. There seem to be three subgenres: space opera,
                     post-apocalypsis and cyberpunk. The latter has been the most prevalent for a while, producing hundreds
                     of Blade Runner clones. Now, there is a subset of cyberpunk I find interesting, which I call "clean
@@ -71,9 +91,10 @@
                     whole thing. Add some sense of "community" for some feels-good moralism. It's corporate trash. But I
                     think there is a room for a new utopian aesthetic, and we already have the building blocks. Recently I
                     played Final Fantasy VIII, and in particular I loved Balamb's Garden and the city of Esthar.
-                </p>
-                <p><a href="#">Read more...</a></p>
-            </article>
+                        </p>
+                    </article>
+                </div>
+            </div>
 
         </main>
 
